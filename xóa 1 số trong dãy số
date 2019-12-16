@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int i=1, n;
+	int a[100];
+	cout << " nhap n ";
+	cin >> n;
+	do {
+		cout << "nhap a[" << i << "]=";
+		cin >> a[i];
+		i++;
+	} while (i <= n);
+	i = 1;
+	do {
+		cout << a[i] << ", ";
+		i++;
+	} while (i <= n);
+	cout << endl;
+	int k;
+	cout << " chon vi tri can xoa ";
+	cin >> k;
+	do {
+		a[k] = a[k + 1];
+		k++;
+	} while (k <= n);
+	i = 1;
+	do {
+		cout << a[i] << ", ";
+		i++;
+	} while (i <= n-1);
+
+}
