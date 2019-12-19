@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int i, n;
+	int a[100];
+	cout << " nhap n ";
+	cin >> n;
+	for (i = 1;i <= n;i++) {
+		cout << " nhap a[" << i << "]=";
+		cin >> a[i];
+	}
+	for (i = 1;i <= n;i++) {
+		cout << a[i] << " , ";
+	}
+	cout << endl;
+	int j = n;
+	for (i = 1;i <= n;i++) {
+		
+		if (i < j) {
+			int tg;
+			tg = a[i];
+			a[i] = a[j];
+			a[j] = tg;
+		}
+		j--;
+	}
+	for (i = 1;i <= n;i++) {
+		cout << a[i] << " , ";
+	}
+}
